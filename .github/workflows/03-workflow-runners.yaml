@@ -7,3 +7,11 @@ jobs:
         steps:
             - name: Show the OS
               run: echo "Running on ${{ runner.os }}"
+    windows-echo:
+        runs-on: windows-latest
+        steps:
+            - name: Show OS
+              shell: bash
+              run: 
+                  echo "This job is running on a windows runner."
+                  echo "Runner OS ${{runner.os}}"
